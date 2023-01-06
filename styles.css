@@ -1,3 +1,51 @@
+.vertical_container_boxes
+{
+  border: 2px solid red;
+  width: fit-content;
+}
+
+
+.small_boxes
+{
+  border: 3px solid gray;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  border-radius: 16px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.outer
+{
+  display: flex;
+  justify-content: center;
+}
+
+.image_container{
+  border: 3px solid gray;
+  width: fit-content;
+  height: 450px;
+  width: 450px;
+
+}
+.image{
+  border: 3px solid yellow;
+  height: 450px;
+  width: 450px;
+}
+
+.both_containers
+{
+  display: flex;
+  border: coral solid 3px;
+  align-items: center;
+  flex-flow:wrap;
+  justify-content: center;
+}
+/*
 * {
   box-sizing: border-box;
 }
@@ -44,3 +92,4 @@ h1 {
   font-weight: bold;
   font-size: 1.5rem;
 }
+*/
