@@ -12,36 +12,49 @@
     <script type="module" src="script.js"></script>
   </head>
   <body>
-    <div id="both_containers" class="both_containers">
-    <div class="image_container">
-  <img type="image1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png" name="submit" alt="submit" onclick="GFG_Fun()" class="img1"/> 
 
-  <img type="imag2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png" name="submit" alt="submit" onclick="GFG_Fun()" class="img2"/>
-
-  <img type="image3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png" name="submit" alt="submit" onclick="GFG_Fun()" class="img3"/>
-
-  <img type="imag4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png" name="submit" alt="submit" onclick="GFG_Fun()" class="img4"/>
-
-  <img type="imag5" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png" name="submit" alt="submit" onclick="GFG_Fun()" class="img5"/>
-  
-    </div>
-
-    <div id="big_image" class="big_image"></div>
+  <div class="row">
+  <div class="column">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZJtCzjxCbu5Nby0eDzsKMKgy-4Zr8tS0oWA&usqp=CAU" alt="Nature" onclick="myFunction(this);">
   </div>
+  <div class="column">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMma1RsDUuSNsB1CLxhrSbNJH9OApmgGQndQ&usqp=CAU" alt="Snow" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBC1F66EwirdF6kpYfY7zb292dTYqeLjzLww&usqp=CAU" alt="Mountains" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://static.vecteezy.com/packs/media/photos/term-bg-1-34fe4c59.jpg" alt="Lights" onclick="myFunction(this);">
+  </div>
+</div>
 
+<!-- The expanding image container -->
+<div class="container">
+  <!-- Close the image -->
+  
 
+  <!-- Expanded image -->
+  <img id="expandedImg" style="width:50%">
+
+  <!-- Image text -->
+  <div id="imgtext"></div>
+</div>
+    
+  
 <script>
-           
 
-            function GFG_Fun() {
-            let img = document.createElement('img');
-           
-
-            img.src ="https://www.shutterstock.com/image-photo/surreal-image-african-elephant-wearing-260nw-1365289022.jpg";
-            document.getElementById('big_image').appendChild(img);
-            }
-           
-            
-</script> 
+function myFunction(imgs) {
+  // Get the expanded image
+  let expandImg = document.getElementById("expandedImg");
+  // Get the image text
+  let imgText = document.getElementById("imgtext");
+  // Use the same src in the expanded image as the image being clicked on from the grid
+  expandImg.src = imgs.src;
+  // Use the value of the alt attribute of the clickable image as text inside the expanded image
+  imgText.innerHTML = imgs.alt;
+  // Show the container element (hidden with CSS)
+  expandImg.parentElement.style.display = "block";
+}
+ </script> 
   </body>
 </html>
