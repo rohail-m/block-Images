@@ -12,56 +12,36 @@
     <script type="module" src="script.js"></script>
   </head>
   <body>
-    
-  <div id="both_containers" class="both_containers"></div>
-  <div id="vertical_container_boxes" class="vertical_container_boxes"></div>
+    <div id="both_containers" class="both_containers">
+    <div class="image_container">
+  <img type="image1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png" name="submit" alt="submit" onclick="GFG_Fun()" class="img1"/> 
 
-  <div id="image_container" class="image_container"></div>
+  <img type="imag2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png" name="submit" alt="submit" onclick="GFG_Fun()" class="img2"/>
 
-    <script>
-      let image = document.createElement('div');
-      image.classList.add('image');
+  <img type="image3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png" name="submit" alt="submit" onclick="GFG_Fun()" class="img3"/>
 
-      document.getElementById('image_container').appendChild(image);
-      let img = document.createElement('img');
+  <img type="imag4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png" name="submit" alt="submit" onclick="GFG_Fun()" class="img4"/>
+
+  <img type="imag5" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png" name="submit" alt="submit" onclick="GFG_Fun()" class="img5"/>
+  
+    </div>
+
+    <div id="big_image" class="big_image"></div>
+  </div>
+
+
+<script>
+           
+
+            function GFG_Fun() {
+            let img = document.createElement('img');
+           
+
+            img.src ="https://www.shutterstock.com/image-photo/surreal-image-african-elephant-wearing-260nw-1365289022.jpg";
+            document.getElementById('big_image').appendChild(img);
+            }
+           
             
-      
-      function multipleboxes(inner,outerr)
-    {
-      let vertical_boxes = document.createElement('div');
-      vertical_boxes.classList.add('vertical_boxes');
-      
-      let small_boxes = document.createElement('div');
-      small_boxes.classList.add('small_boxes');
-      small_boxes.innerText = inner;
-
-      let outer = document.createElement('div');
-      outer.classList.add('outer');
-      outer.innerText = outerr;
-
-      vertical_boxes.appendChild(small_boxes);
-
-      document.getElementById('vertical_container_boxes').appendChild(vertical_boxes);
-      document.getElementById('vertical_container_boxes').appendChild(outer);
-    }
-
-      let data = [
-        {inner: '1', outer: 'one'},
-        {inner: '2', outer: 'two'},
-        {inner: '3', outer: 'three'},
-        {inner: '4', outer: 'four'},
-      ];
-
-      for(let i=0;i<data.length;i++)
-      {
-        let item = data[i];
-        multipleboxes(item.inner,item.outer);
-      }
-      /*document.getElementById('vertical_container_boxes').appendChild(image);*/
-    
-      document.getElementById("both_containers").appendChild(vertical_container_boxes);
-      document.getElementById("both_containers").appendChild(image_container);
-    
-    </script>
+</script> 
   </body>
 </html>
