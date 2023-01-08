@@ -12,49 +12,46 @@
     <script type="module" src="script.js"></script>
   </head>
   <body>
-
-  <div class="row">
-  <div class="column">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZJtCzjxCbu5Nby0eDzsKMKgy-4Zr8tS0oWA&usqp=CAU" alt="Nature" onclick="myFunction(this);">
+   
+    <div class="both">
+    <div class="all_container">
+      <div class="row1">
+        <div class="colum1">
+          <img class="animal" src="https://www.shutterstock.com/image-photo/surreal-image-african-elephant-wearing-260nw-1365289022.jpg" alt="animal.jpg" onclick="myFunction(this)"/>
+        </div>
+      </div>
+      <div class="row2">
+      <div class="colum2">
+        <img class="green" src="https://www.w3schools.com/css/img_forest.jpg" alt="green" onclick="myFunction(this)"/>
+      </div>
+    </div>
+      <div class="row3">
+      <div class="colum3">
+        <img class="water" src="https://wallpaperaccess.com/full/51363.jpg" alt="water" onclick="myFunction(this)"/>
+      </div>
+    </div>
+      <div class="row4">
+      <div class="colum4">
+       <img class="lights" src="https://thumbs.dreamstime.com/b/city-lights-rawalpindi-pakistan-cars-113221800.jpg" alt="lights" onclick="myFunction(this)"/>
+      </div>
+    </div>
   </div>
-  <div class="column">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMma1RsDUuSNsB1CLxhrSbNJH9OApmgGQndQ&usqp=CAU" alt="Snow" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBC1F66EwirdF6kpYfY7zb292dTYqeLjzLww&usqp=CAU" alt="Mountains" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="https://static.vecteezy.com/packs/media/photos/term-bg-1-34fe4c59.jpg" alt="Lights" onclick="myFunction(this);">
-  </div>
-</div>
 
-<!-- The expanding image container -->
-<div class="container">
-  <!-- Close the image -->
-  
 
-  <!-- Expanded image -->
-  <img id="expandedImg" style="width:50%">
-
-  <!-- Image text -->
-  <div id="imgtext"></div>
-</div>
+      <div class="container">
+        <img src="https://www.shutterstock.com/image-photo/surreal-image-african-elephant-wearing-260nw-1365289022.jpg" alt="big_image" id ="bigimage" class="big_image"/>
+       
+      </div>
+    </div>
     
-  
-<script>
 
-function myFunction(imgs) {
-  // Get the expanded image
-  let expandImg = document.getElementById("expandedImg");
-  // Get the image text
-  let imgText = document.getElementById("imgtext");
-  // Use the same src in the expanded image as the image being clicked on from the grid
-  expandImg.src = imgs.src;
-  // Use the value of the alt attribute of the clickable image as text inside the expanded image
-  imgText.innerHTML = imgs.alt;
-  // Show the container element (hidden with CSS)
-  expandImg.parentElement.style.display = "block";
-}
- </script> 
+      <script>
+     function myFunction(imgs)
+      {
+        let bigimage = document.getElementById("bigimage");
+        bigimage.src = imgs.src;
+        document.getElementById('bigimage').style.display = "flex ";
+      }
+      </script>
   </body>
 </html>
